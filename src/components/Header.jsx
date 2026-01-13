@@ -31,7 +31,7 @@ const Header = () => {
     <>
       {/* Header */}
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-500 transition-all duration-300 ${
           isVisible ? "translate-y-0" : "-translate-y-full"
         } ${isScrolled ? "bg-white backdrop-blur-md" : "bg-transparent"}`}
       >
@@ -74,26 +74,17 @@ const Header = () => {
 
           {/* Right: Navigation (hidden on scroll) and Icons */}
           <div className="flex items-center gap-6 md:gap-8 ml-auto">
-            {isScrolled && (
-              <nav className="hidden md:flex items-center gap-6 text-black text-sm font-semibold">
-                <Link href="/" className="hover:opacity-70 transition">
-                  HOME
-                </Link>
-                <Link href="/menu" className="hover:opacity-70 transition">
-                  MENU
-                </Link>
-                <Link href="#" className="hover:opacity-70 transition">
-                  ABOUT
-                </Link>
-                <Link href="#" className="hover:opacity-70 transition">
-                  CONTACT
-                </Link>
-              </nav>
-            )}
-
             <div className={`flex items-center gap-4 ${"text-black"}`}>
-              <Button className="hidden md:block" text="register to attend" />
-              <Button className="hidden md:block" text="Apply to Exhibit" />
+              <Button
+                className={`hidden md:block ${isScrolled && "bg-primary!"} `}
+                text="register to attend"
+              />
+              <Button
+                className={`hidden md:block ${
+                  isScrolled && "text-primary! border-primary!"
+                } `}
+                text="Apply to Exhibit"
+              />
 
               <button
                 className="md:hidden text-white underline text-xl"

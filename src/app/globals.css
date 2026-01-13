@@ -24,13 +24,55 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #fff;
+    --foreground: #0a0a0a;
   }
+}
+
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-dm-sans);
+}
+
+.marquee-container {
+  width: 100vw;
+  /* margin-left: -10vw; */
+  /* height: 116.4px; */
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.marquee-content {
+  animation: scroll 20s linear infinite;
+}
+
+.marquee-content.marquee-reverse {
+  animation: scroll-reverse 20s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
