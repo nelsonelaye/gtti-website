@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="flex flex-wrap justify-between items-start gap-8">
           {/* Name */}
           <div className="flex-1 min-w-[200px]">
-            <h2 className="text-3xl font-bold font-asap">GTTI</h2>
+            <h2 className="text-3xl font-bold font-asap text-white!">GTTI</h2>
           </div>
 
           {/* Contact Info */}

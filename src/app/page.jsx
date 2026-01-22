@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Header from "@/components/Header";
 import SpeakerCard from "@/components/SpeakerCard";
@@ -5,8 +6,11 @@ import Button from "@/components/UI/Button";
 import { FaPlay, FaArrowRight } from "react-icons/fa6";
 import BrandsCarousel from "@/components/BrandsCarousel";
 import GalleryCarousel from "@/components/GalleryCarousel";
+import YoutubeFrame from "@/components/YoutubeFrame";
+import { useState } from "react";
 
 export default function Home() {
+  const [showYoutubeFrame, setShowYoutubeFrame] = useState(false);
   return (
     <main className="min-h-screen">
       {/* <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start"></main> */}
@@ -33,7 +37,7 @@ export default function Home() {
               <p className="text-xl font-light tracking-wider mb-2">
                 OCTOBER 9TH - 15TH 2026
               </p>
-              <h1 className="text-4xl md:text-7xl font-bold mb-4 max-w-5xl">
+              <h1 className="text-4xl md:text-7xl font-bold mb-4 max-w-5xl text-white!">
                 International Livestock and Agriculture Investment Summit &
                 Exhibition 2026
               </h1>
@@ -119,13 +123,23 @@ export default function Home() {
             fill
             className="object-cover"
           />
+
           <div className="absolute inset-0 flex items-center justify-center z-10">
             <button className="w-16 h-16 md:w-32 md:h-32 bg-secondary rounded-full flex items-center justify-center transition-all duration-700 hover:scale-120 shadow-lg cursor-pointer">
-              <FaPlay color="black" size="32px" />
+              <FaPlay
+                color="black"
+                size="32px"
+                onClick={() => setShowYoutubeFrame(true)}
+                className="cursor-pointer"
+              />
             </button>
           </div>
           <div className="absolute inset-0 bg-primary-light/60"></div>
         </div>
+
+        {showYoutubeFrame && (
+          <YoutubeFrame onClose={() => setShowYoutubeFrame(false)} />
+        )}
       </section>
 
       <section className="w-full px-5 py-16 md:py-20">
@@ -186,7 +200,7 @@ export default function Home() {
             <div className="absolute -top-4 -right-4 w-32 h-32 md:w-48 md:h-48 bg-gray-700 rounded-full mix-blend-multiply filter blur-xl opacity-20 z-10"></div>
           </div>
           <div className="w-full lg:w-1/2 text-left">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white!">
               Apply to Exhibit at the Summit
             </h2>
             <p className="text-lg text-gray-300 mb-8">

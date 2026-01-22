@@ -57,16 +57,16 @@ const Header = () => {
               <Link href="/" className="hover:opacity-70 transition">
                 Home
               </Link>
-              <Link href="/menu" className="hover:opacity-70 transition">
+              <Link href="/exhibition" className="hover:opacity-70 transition">
                 Exhibit
               </Link>
-              <Link href="/menu" className="hover:opacity-70 transition">
+              <Link href="/gallery" className="hover:opacity-70 transition">
                 Gallery
               </Link>
-              <Link href="#" className="hover:opacity-70 transition">
+              <Link href="/about" className="hover:opacity-70 transition">
                 About
               </Link>
-              <Link href="#" className="hover:opacity-70 transition">
+              <Link href="/contact" className="hover:opacity-70 transition">
                 Contact
               </Link>
             </nav>
@@ -103,13 +103,19 @@ const Header = () => {
           <Link href="/" className="block hover:opacity-70 transition">
             HOME
           </Link>
-          <Link href="/menu" className="block hover:opacity-70 transition">
-            MENU
+          <Link
+            href="/exhibition"
+            className="block hover:opacity-70 transition"
+          >
+            EXHIBIT
           </Link>
-          <Link href="#" className="block hover:opacity-70 transition">
+          <Link href="/gallery" className="block hover:opacity-70 transition">
+            GALLERY
+          </Link>
+          <Link href="/about" className="block hover:opacity-70 transition">
             ABOUT
           </Link>
-          <Link href="#" className="block hover:opacity-70 transition">
+          <Link href="/contact" className="block hover:opacity-70 transition">
             CONTACT
           </Link>
         </nav>
