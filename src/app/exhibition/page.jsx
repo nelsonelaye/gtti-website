@@ -135,8 +135,8 @@ const Exhibition = () => {
                 The agri-sector (especially the livestock and aquaculture
                 sub-sector) has shown continued prospects for strong growth in
                 the short, medium and long-term. Huge investment opportunities
-                exist across Nigeria's livestock and aquaculture value chain as
-                the government tries to boost local production.
+                exist across Nigeria&apos;s livestock and aquaculture value
+                chain as the government tries to boost local production.
               </p>
               {/* <p className="font-semibold text-primary">
                 Companies benefit from participation in many ways:
@@ -235,14 +235,14 @@ const Exhibition = () => {
           </h2>
           <p className="text-lg text-gray-600 mb-8">
             Join leading companies in the livestock and aquaculture industry at
-            West Africa's premier trade event.
+            West Africa&apos;s premier trade event.
           </p>
           <div className="space-y-4">
             <p className="text-lg text-gray-700">
               We support your entry strategy by connecting you to the right
               distributors and facilitating profitable partnerships. We also
-              offer you experts' insights into the local regulations so you can
-              better navigate the market.
+              offer you experts&apos; insights into the local regulations so you
+              can better navigate the market.
             </p>
           </div>
           <div className="mt-12">

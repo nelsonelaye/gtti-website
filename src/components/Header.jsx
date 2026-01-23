@@ -12,6 +12,16 @@ const Header = () => {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
 
+  const pathname = usePathname();
+
+  const links = [
+    { href: "/", label: "Home" },
+    { href: "/exhibition", label: "Exhibit" },
+    { href: "/gallery", label: "Gallery" },
+    { href: "/about", label: "About" },
+    { href: "/contact", label: "Contact" },
+  ];
+
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
@@ -35,7 +45,7 @@ const Header = () => {
           isVisible ? "translate-y-0" : "-translate-y-full"
         } ${isScrolled ? "bg-white backdrop-blur-md" : "bg-transparent"}`}
       >
-        <div className="max-w-7xl mx-auto px-4 md:px-8 py-4 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 md:px-8 py-4 flex items-center justify-between border-b-secondary/50 border-b ">
           <div className="flex items-center gap-6 md:gap-8">
             <Link href="/" className={!isScrolled ? "md:mx-auto" : "mr-auto"}>
               <div
@@ -54,21 +64,17 @@ const Header = () => {
                 isScrolled ? "text-black" : "text-white"
               }`}
             >
-              <Link href="/" className="hover:opacity-70 transition">
-                Home
-              </Link>
-              <Link href="/exhibition" className="hover:opacity-70 transition">
-                Exhibit
-              </Link>
-              <Link href="/gallery" className="hover:opacity-70 transition">
-                Gallery
-              </Link>
-              <Link href="/about" className="hover:opacity-70 transition">
-                About
-              </Link>
-              <Link href="/contact" className="hover:opacity-70 transition">
-                Contact
-              </Link>
+              {links.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`hover:opacity-70 transition ${
+                    pathname === link.href ? "text-secondary" : ""
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              ))}
             </nav>
           </div>
 
@@ -81,7 +87,8 @@ const Header = () => {
               />
               <Button
                 className={`hidden md:block ${
-                  isScrolled && "text-primary! border-primary!"
+                  isScrolled &&
+                  "text-primary! border-primary! hover:bg-secondary! hover:border-secondary!"
                 } `}
                 text="Apply to Exhibit"
               />

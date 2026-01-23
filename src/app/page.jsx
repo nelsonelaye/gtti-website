@@ -8,6 +8,7 @@ import BrandsCarousel from "@/components/BrandsCarousel";
 import GalleryCarousel from "@/components/GalleryCarousel";
 import YoutubeFrame from "@/components/YoutubeFrame";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function Home() {
   const [showYoutubeFrame, setShowYoutubeFrame] = useState(false);
@@ -70,12 +71,12 @@ export default function Home() {
             <p className="text-lg mb-4">
               The Annual Professional Conference is an exciting gathering of
               industry experts, thought leaders, and professionals from across
-              the country. This year's event will feature a wide range of
+              the country. This year&apos;s event will feature a wide range of
               sessions and workshops designed to help attendees stay ahead of
               the curve and achieve their professional goals.
             </p>
             <p className="text-lg">
-              This year's conference will be held at the{" "}
+              This year&apos;s conference will be held at the{" "}
               <span className="font-bold">
                 San Diego Convention Center in San Diego, California.
               </span>{" "}
@@ -117,11 +118,10 @@ export default function Home() {
 
       <section className="w-full relative">
         <div className="relative w-full h-96 md:h-screen">
-          <Image
-            src="/images/black-female-speaker.jpg"
-            alt="Cow grazing in green field"
-            fill
-            className="object-cover"
+          <img
+            src="https://res.cloudinary.com/drjunh0fs/image/upload/v1769172658/IMG_5388_wfaabm.jpg"
+            alt="conference speaker"
+            className="object-cover w-full h-full object-top"
           />
 
           <div className="absolute inset-0 flex items-center justify-center z-10">
@@ -253,11 +253,13 @@ export default function Home() {
           {/* </div> */}
 
           <div className="mx-auto pt-5">
-            <Button
-              text="View highlights"
-              variant="primary"
-              className="md:px-12! md:py-5!"
-            />
+            <Link href="/gallery">
+              <Button
+                text="View highlights"
+                variant="primary"
+                className="md:px-12! md:py-5!"
+              />
+            </Link>
           </div>
         </div>
       </section>

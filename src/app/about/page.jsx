@@ -154,11 +154,11 @@ const About = () => {
                   The GTTI partners with industry stakeholders and is dedicated
                   to enhancing food and nutrition security, poverty mitigation,
                   and stimulation of economic growth within the ecosystem. The
-                  organization's programs and exhibitions are largely designed
-                  to not only create value by creating a platform for all
-                  stakeholder interactions but has remained a pillar of support
-                  to the government on projects and programs that will create
-                  jobs and grow the country's GDP.
+                  organization&apos;s programs and exhibitions are largely
+                  designed to not only create value by creating a platform for
+                  all stakeholder interactions but has remained a pillar of
+                  support to the government on projects and programs that will
+                  create jobs and grow the country&apos;s GDP.
                 </p>
               </div>
             </div>
@@ -260,7 +260,7 @@ const About = () => {
               programs that are largely designed for all stakeholders
               interactions, support government and international organizations
               on projects that will be for empowerment and growth of the
-              country's GDP.
+              country&apos;s GDP.
             </p>
           </div>
         </div>
@@ -286,7 +286,7 @@ const About = () => {
                 className="bg-gray-50 p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow border-l-4 border-primary"
               >
                 <div className="flex items-start gap-6">
-                  <div className="flex-shrink-0">
+                  <div className="shrink-0">
                     <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center">
                       <span className="text-2xl font-bold text-white">
                         {number}
@@ -316,7 +316,7 @@ const About = () => {
               Our Impact
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              See how we're transforming agriculture across Africa
+              See how we&apos;re transforming agriculture across Africa
             </p>
           </div>
 

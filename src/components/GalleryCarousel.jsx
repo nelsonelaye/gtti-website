@@ -1,6 +1,8 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import { useQuery } from "@tanstack/react-query";
+import { getAllImagesUrls } from "@/lib/cloudinary";
 
 const GalleryCarousel = ({ reverse }) => {
   const contents = [
@@ -12,6 +14,11 @@ const GalleryCarousel = ({ reverse }) => {
     "/images/exhibition.jpg",
   ];
 
+  const { data: galleryData, error: cloudinaryError } = useQuery({
+    queryKey: ["gallery"],
+    queryFn: () => getAllImagesUrls("GTTI/speakers and guests"),
+  });
+
   const displayContents = [...contents, ...contents];
   return (
     <div className="marquee-container bg-primary-500 z-400">
@@ -20,16 +27,16 @@ const GalleryCarousel = ({ reverse }) => {
           reverse ? "marquee-reverse" : ""
         }`}
       >
-        {displayContents.map((src, index) => (
+        {galleryData?.resources.map((src, index) => (
           <div
             key={index}
             className="relative min-w-[400px] h-[314] overflow-hidden rounded-lg"
           >
-            <Image
-              src={src}
+            <img
+              src={src?.url}
               alt="VR headset user"
               fill
-              className="object-cover"
+              className="object-cover w-fit h-full"
             />
           </div>
         ))}
