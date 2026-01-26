@@ -10,6 +10,7 @@ import {
   IoTrophyOutline,
   IoSchoolOutline,
 } from "react-icons/io5";
+import Link from "next/link";
 
 const About = () => {
   const objectives = [
@@ -87,7 +88,7 @@ const About = () => {
   return (
     <main className="min-h-screen bg-white">
       {/* Hero Section with Image */}
-      <section className="relative w-full h-screen overflow-hidden">
+      <section className="relative w-full h-[80vh] md:h-[60vh] overflow-hidden">
         <div className="absolute inset-0 w-full h-full">
           <Image
             src="/images/conference.jpg"
@@ -100,10 +101,10 @@ const About = () => {
 
         <div className="relative z-10 w-full h-full flex items-center justify-center text-center px-5">
           <div className="w-full max-w-4xl">
-            <h1 className="text-4xl md:text-7xl font-bold mb-6 text-white">
+            <h1 className="text-4xl md:text-7xl font-bold mb-6 text-white!">
               About GTTI
             </h1>
-            <p className="text-xl md:text-2xl text-gray-100 mb-8 max-w-3xl mx-auto">
+            <p className="md:text-2xl text-gray-100 mb-8 max-w-3xl mx-auto">
               Green Transformation Trailblazers Initiative - Working towards a
               food-secure future in developing African countries
             </p>
@@ -114,23 +115,23 @@ const About = () => {
       {/* Who We Are Section */}
       <section className="w-full px-5 py-20 md:py-28 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 ">
             {/* Image Side */}
             <div className="relative h-[400px] lg:h-[600px] rounded-lg overflow-hidden">
               <Image
                 src="/images/farmer.jpg"
                 alt="Farming community"
                 fill
-                className="object-cover"
+                className="object-cover w-full h-full hover:scale-110 transition-transform duration-500"
               />
             </div>
 
             {/* Content Side */}
             <div>
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-primary leading-tight">
+              <h2 className="text-3xl md:text-5xl  font-bold mb-4 text-primary leading-tight">
                 Who We Are
               </h2>
-              <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
+              <div className="space-y-6 md:text-lg  leading-relaxed">
                 <p>
                   Green Transformation Trailblazers Initiative (GTTI) is a
                   Non-Government organization domiciled in Nigeria working with
@@ -146,9 +147,16 @@ const About = () => {
                 </p>
                 <p>
                   The company is also the official organizer of the
-                  International Trade Fair for Livestock and Aquaculture (ITFLA)
-                  Annual Expo in Nigeria and West African Dairy and Beef
-                  Summit/Exhibition.
+                  International{" "}
+                  <span className="font-semibold">
+                    {" "}
+                    Trade Fair for Livestock and Aquaculture (ITFLA) Annual Expo
+                  </span>{" "}
+                  in Nigeria and{" "}
+                  <span className="font-semibold">
+                    West African Dairy and Beef Summit/Exhibition
+                  </span>
+                  .
                 </p>
                 <p>
                   The GTTI partners with industry stakeholders and is dedicated
@@ -167,58 +175,58 @@ const About = () => {
       </section>
 
       {/* Vision & Mission Section */}
-      <section className="w-full px-5 py-20 md:py-28 bg-gray-50">
+      <section className="w-full px-5 py-20 md:py-28 bg-primary">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-primary">
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 text-white!">
               Vision, Mission & Strategy
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 md:w-4/5 mx-auto">
             {/* Vision */}
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+            <div className=" rounded-lg overflow-hidden">
               <div className="relative h-64">
                 <Image
-                  src="/images/vision.jpg"
+                  src="/images/cattles.jpg"
                   alt="Vision"
                   fill
                   className="object-cover"
                 />
                 <div className="absolute inset-0 bg-primary/60"></div>
               </div>
-              <div className="p-10">
-                <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-6">
-                  <IoRocketOutline color="white" size="32px" />
+              <div className="py-10">
+                <div className="p-3 w-fit bg-white rounded-full flex items-center justify-center mb-4">
+                  <IoRocketOutline className="text-primary" size="32px" />
                 </div>
-                <h3 className="text-3xl font-bold mb-4 text-primary">
+                <h3 className="text-xl md:text-3xl font-bold mb-4 text-white!">
                   Our Vision
                 </h3>
-                <p className="text-lg text-gray-700 leading-relaxed">
+                <p className="md:text-lg text-white leading-relaxed max-w-3xl">
                   To bring about sustainable and productive agriculture.
                 </p>
               </div>
             </div>
 
             {/* Mission */}
-            <div className="bg-primary rounded-lg shadow-lg overflow-hidden">
+            <div className="bg-primary rounded-lg  overflow-hidden">
               <div className="relative h-64">
                 <Image
-                  src="/images/mission.jpg"
+                  src="/images/market.jpg"
                   alt="Mission"
                   fill
                   className="object-cover"
                 />
                 <div className="absolute inset-0 bg-black/40"></div>
               </div>
-              <div className="p-10 text-white">
-                <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mb-6">
-                  <IoLeafOutline color="#166534" size="32px" />
+              <div className="py-10 text-white!">
+                <div className="p-3 w-fit bg-white rounded-full flex items-center justify-center mb-4">
+                  <IoLeafOutline className="text-primary" size="32px" />
                 </div>
-                <h3 className="text-3xl font-bold mb-4 text-white">
+                <h3 className="text-xl md:text-3xl font-bold mb-4 text-white!">
                   Our Mission
                 </h3>
-                <p className="text-lg text-gray-100 leading-relaxed">
+                <p className="md:text-lg text-gray-100 leading-relaxed max-w-[450px]">
                   To improve wholesome food security through sustainable
                   competitive advantage in agriculture production, particularly
                   across the African continent.
@@ -232,8 +240,8 @@ const About = () => {
       {/* Aims and Objectives Section */}
       <section className="w-full px-5 py-20 md:py-28 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-primary">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 text-primary">
               Aims and Objectives
             </h2>
           </div>
@@ -253,7 +261,7 @@ const About = () => {
             ))}
           </div>
 
-          <div className="mt-12 bg-gray-50 p-8 rounded-lg border-l-4 border-primary">
+          <div className="mt-12 bg-gray-50 p-8 rounded-lg border-l-4 border-primary hidden">
             <p className="text-lg text-gray-700 leading-relaxed">
               Organizing of both local and international exhibitions of products
               and services of agriculture, commerce and technology. Organizing
@@ -270,7 +278,7 @@ const About = () => {
       <section className="w-full px-5 py-20 md:py-28 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-primary">
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 text-primary">
               Our Strategy
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
@@ -279,37 +287,53 @@ const About = () => {
             </p>
           </div>
 
-          <div className="space-y-6">
-            {strategies.map(({ number, title, description }, index) => (
-              <div
-                key={index}
-                className="bg-gray-50 p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow border-l-4 border-primary"
-              >
-                <div className="flex items-start gap-6">
-                  <div className="shrink-0">
-                    <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center">
-                      <span className="text-2xl font-bold text-white">
-                        {number}
-                      </span>
+          {/* Timeline */}
+          <div className="relative">
+            {/* Vertical Line */}
+            <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-secondary to-primary/30 transform md:-translate-x-1/2"></div>
+
+            {/* Timeline Items */}
+            <div className="space-y-12 md:space-y-20">
+              {strategies.map(({ number, title, description }, index) => (
+                <div
+                  key={index}
+                  className={`relative flex items-center ${
+                    index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+                  } flex-row`}
+                >
+                  {/* Timeline Dot */}
+                  <div className="absolute left-8 md:left-1/2 transform md:-translate-x-1/2 w-12 h-12 md:w-16 md:h-16 bg-primary rounded-full flex items-center justify-center z-10 shadow-lg">
+                    <span className="text-lg md:text-2xl font-bold text-white">
+                      {number}
+                    </span>
+                  </div>
+
+                  {/* Content Card */}
+                  <div
+                    className={`w-full  md:w-[calc(50%-4rem)] ml-24 md:ml-0 ${
+                      index % 2 === 0
+                        ? "md:pr-16 md:text-right"
+                        : "md:pl-16 md:text-left"
+                    }`}
+                  >
+                    <div className="bg-neutral/10 p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 group">
+                      <h3 className="text-lg md:text-2xl font-bold mb-4 text-primary group-hover:text-secondary transition-colors">
+                        {title}
+                      </h3>
+                      <p className="text-sm md:text-base text-gray-700 leading-relaxed">
+                        {description}
+                      </p>
                     </div>
                   </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold mb-3 text-primary">
-                      {title}
-                    </h3>
-                    <p className="text-lg text-gray-700 leading-relaxed">
-                      {description}
-                    </p>
-                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
       {/* Impact Gallery Section */}
-      <section className="w-full px-5 py-20 md:py-28 bg-gray-50">
+      <section className="w-full px-5 py-20 md:py-28 bg-gray-50 hidden">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-primary">
@@ -409,62 +433,73 @@ const About = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="relative w-full px-5 py-20 md:py-28 overflow-hidden">
-        <div className="absolute inset-0 w-full h-full">
-          <Image
-            src="/images/partnership.jpg"
-            alt="Partnership"
-            fill
-            className="object-cover"
-          />
-          <div className="absolute inset-0 bg-primary/90"></div>
-        </div>
 
-        <div className="relative z-10 max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white leading-tight">
-            Join Us in Our Mission
-          </h2>
-          <p className="text-lg text-gray-100 mb-8">
-            Be part of the transformation towards a food-secure Africa. Partner
-            with us to create sustainable agricultural solutions.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button
-              text="Become a Partner"
-              variant="primary"
-              className="md:px-12 md:py-5 text-sm font-semibold tracking-wider mx-auto bg-white text-primary hover:bg-gray-100"
-            />
-            <Button
-              text="Contact Us"
-              variant="secondary"
-              className="md:px-12 md:py-5 text-sm font-semibold tracking-wider mx-auto border-2 border-white text-white hover:bg-white hover:text-primary"
-            />
+      <section className="w-full mx-auto px-5 py-20 md:py-28 bg-primary hidden">
+        <div className="mx-auto px-2 md:px-5 flex flex-col gap-4">
+          <div className="text-center">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white!">
+              Empowering Farmers. <br /> Growing Nations.
+            </h2>
+
+            <p className="md:text-lg mb-8 max-w-2xl mx-auto text-white!">
+              From research to market, we are building the livestock and
+              aquaculture infrastructure that powers economies. Partner with us
+              to scale production, secure food systems, and drive sustainable
+              growth across West Africa.
+            </p>
+            <div className="flex justify-center items-center">
+              <Button
+                text="Contact Our Team"
+                variant="primary"
+                className="md:px-12 md:py-5 text-sm font-semibold tracking-wider mx-auto"
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Stay in the Loop */}
-      <section className="w-full px-5 py-16 md:py-20 bg-white">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-primary">
-            Stay in the Loop
-          </h2>
-          <p className="text-xl text-gray-600 mb-8">
-            Get the latest updates on our programs, initiatives, and impact
-            stories.
-          </p>
+      <section className="w-full bg-primary text-white py-16">
+        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row  gap-12 px-5">
+          <div className="w-full lg:w-1/2 max-h-[500px] overflow-hidden relative rounded-lg ">
+            <Image
+              src="/images/fish.jpg"
+              alt="Exhibitor booth"
+              width={800}
+              height={640}
+              className="rounded-lg object-cover object-top shadow-lg w-full! hover:scale-110 transition-transform duration-500"
+            />
+            <div className="absolute -bottom-4 -left-4 w-32 h-32 md:w-48 md:h-48 bg-white rounded-full mix-blend-multiply filter blur-xl opacity-20 z-10"></div>
+            <div className="absolute -top-4 -right-4 w-32 h-32 md:w-48 md:h-48 bg-gray-700 rounded-full mix-blend-multiply filter blur-xl opacity-20 z-10"></div>
+          </div>
+          <div className="w-full lg:w-1/2 text-left">
+            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white!">
+              Pioneer a Food-Secure <br /> and Prosperous Africa
+            </h2>
 
-          <div className="flex flex-col md:flex-row gap-4 max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-6 py-4 rounded-full border border-gray-300 focus:outline-none focus:border-primary"
-            />
-            <Button
-              text="Subscribe"
-              variant="primary"
-              className="md:px-8 md:py-4"
-            />
+            <div className="md:text-lg text-gray-300 mb-8">
+              <p className="mb-4">
+                As trailblazers in the green transformation movement, we are
+                building a collaborative ecosystem where industry stakeholders
+                and developmental partners converge.
+              </p>
+
+              <p>
+                Through specialized education, trade promotion, and
+                government-level support, we are securing Africa’s nutrition
+                future while fostering a climate for job creation and commercial
+                excellence. Partner with GTTI today to harness the potential of
+                the livestock sector and drive a resilient, food-secure legacy
+                for the continent.
+              </p>
+            </div>
+
+            <Link href="/contact">
+              <Button
+                text="Talk to Our Team"
+                variant="primary"
+                className="md:px-12! md:py-5!"
+              />
+            </Link>
           </div>
         </div>
       </section>

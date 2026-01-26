@@ -11,6 +11,7 @@ import { useState } from "react";
 import Link from "next/link";
 import HighlightSection from "@/components/HighlightSection";
 import CtaSection from "@/components/CtaSection";
+import ExhibitSection from "@/components/ExhibitSection";
 
 export default function Home() {
   const [showYoutubeFrame, setShowYoutubeFrame] = useState(false);
@@ -27,7 +28,7 @@ export default function Home() {
             priority
           />
 
-          <div className="absolute inset-0 bg-primary-light/60"></div>
+          <div className="absolute inset-0 bg-primary-light/80"></div>
         </div>
 
         {/* Gradient Overlay */}
@@ -190,42 +191,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-full bg-primary text-white py-16">
-        <div className="max-w-6xl mx-auto flex flex-col lg:flex-row  gap-12 px-5">
-          <div className="w-full lg:w-1/2 max-h-[500px] overflow-hidden relative rounded-lg ">
-            <Image
-              src="/images/exhibition.jpg"
-              alt="Exhibitor booth"
-              width={800}
-              height={640}
-              className="rounded-lg object-cover shadow-lg w-full! hover:scale-110 transition-transform duration-500"
-            />
-            <div className="absolute -bottom-4 -left-4 w-32 h-32 md:w-48 md:h-48 bg-white rounded-full mix-blend-multiply filter blur-xl opacity-20 z-10"></div>
-            <div className="absolute -top-4 -right-4 w-32 h-32 md:w-48 md:h-48 bg-gray-700 rounded-full mix-blend-multiply filter blur-xl opacity-20 z-10"></div>
-          </div>
-          <div className="w-full lg:w-1/2 text-left">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white!">
-              Apply to Exhibit at the Summit
-            </h2>
-            <p className="md:text-lg text-gray-300 mb-8">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-              commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-              penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-              Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
-              sem. Nulla consequat massa quis enim. Donec pede justo, fringilla
-              vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut,
-              imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede
-              mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum
-              semper nisi.
-            </p>
-            <Button
-              text="APPLY TO EXHIBIT"
-              variant="primary"
-              className="md:px-12! md:py-5!"
-            />
-          </div>
-        </div>
-      </section>
+      <ExhibitSection />
 
       <section className="w-full py-16 px-5">
         <div className="max-w-6xl mx-auto">

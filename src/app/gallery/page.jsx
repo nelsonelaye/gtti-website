@@ -104,7 +104,7 @@ const Gallery = () => {
             className="object-cover object-top w-full h-full"
           />
 
-          <div className="absolute inset-0 bg-primary-light/60"></div>
+          <div className="absolute inset-0 bg-primary-light/80"></div>
         </div>
         <div className="relative z-10 w-full h-full flex items-center justify-center text-center">
           <div className="w-full max-w-4xl">

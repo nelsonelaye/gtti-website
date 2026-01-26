@@ -7,6 +7,7 @@ import { MdOutlineRocketLaunch } from "react-icons/md";
 import { IoBulbOutline, IoEyeOutline, IoTicketOutline } from "react-icons/io5";
 import { FaChartLine } from "react-icons/fa6";
 import HighlightSection from "@/components/HighlightSection";
+import ExhibitSection from "@/components/ExhibitSection";
 
 const Exhibition = () => {
   const logos = [
@@ -96,7 +97,7 @@ const Exhibition = () => {
             alt="Exhibition"
             className="object-cover object-top w-full h-full"
           />
-          <div className="absolute inset-0 bg-primary-light/60"></div>
+          <div className="absolute inset-0 bg-primary-light/80"></div>
         </div>
 
         <div className="relative z-10 w-full  h-full flex items-center justify-center text-center">
@@ -227,8 +228,10 @@ const Exhibition = () => {
 
       <HighlightSection />
 
+      <ExhibitSection />
+
       {/* CTA Section - Be the First to Know */}
-      <section className="w-full px-5 py-20 md:py-28 bg-primary">
+      <section className="w-full px-5 py-20 md:py-28 bg-primary hidden">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 text-white! leading-tight">
             Secure Your Exhibition Space
