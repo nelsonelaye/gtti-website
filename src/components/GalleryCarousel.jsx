@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { useQuery } from "@tanstack/react-query";
 import { getAllImagesUrls } from "@/lib/cloudinary";
+import { optimizeCloudinaryUrl } from "@/lib/helper";
 
 const GalleryCarousel = ({ reverse }) => {
   const contents = [
@@ -30,13 +31,22 @@ const GalleryCarousel = ({ reverse }) => {
         {galleryData?.resources.map((src, index) => (
           <div
             key={index}
-            className="relative min-w-[400px] h-[314] overflow-hidden rounded-lg"
+            className="relative min-w-[250px] w-4/5 h-[200] md:min-w-[400px] md:h-[314] overflow-hidden rounded-lg bg-neutral"
           >
-            <img
-              src={src?.url}
-              alt="VR headset user"
-              fill
-              className="object-cover w-fit h-full"
+            <Image
+              src={optimizeCloudinaryUrl(src?.url, {
+                width: 1000,
+                quality: 90,
+                format: "auto",
+              })}
+              alt="Gallery image"
+              width={400}
+              height={314}
+              className="object-cover h-full"
+              loading="lazy"
+              // sizes="(max-width: 768px) 100vw, 400px"
+              quality={100}
+              unoptimized
             />
           </div>
         ))}

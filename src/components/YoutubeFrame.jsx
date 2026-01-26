@@ -10,14 +10,14 @@ const YoutubeFrame = ({ onClose }) => {
         onClick={onClose}
       />
       <iframe
-        width="60%"
+        width="80%"
         height="60%"
         src={`https://www.youtube.com/embed/8Yr4RlmEu0c`}
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
         title="Embedded youtube"
-        className="rounded-md"
+        className="rounded-md md:w-[60%]!"
       />
     </div>
   );

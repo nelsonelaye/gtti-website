@@ -2,7 +2,22 @@
 const nextConfig = {
   /* config options here */
   images: {
-    domains: ["picsum.photos", "res.cloudinary.com"],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "picsum.photos",
+      },
+      {
+        protocol: "https",
+        hostname: "res.cloudinary.com",
+      },
+      {
+        protocol: "http", // Add this for http URLs
+        hostname: "res.cloudinary.com",
+      },
+    ],
+
+    unoptimized: true,
   },
 };
 

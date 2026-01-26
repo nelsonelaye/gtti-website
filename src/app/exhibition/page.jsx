@@ -6,6 +6,7 @@ import { PiUsersThreeBold } from "react-icons/pi";
 import { MdOutlineRocketLaunch } from "react-icons/md";
 import { IoBulbOutline, IoEyeOutline, IoTicketOutline } from "react-icons/io5";
 import { FaChartLine } from "react-icons/fa6";
+import HighlightSection from "@/components/HighlightSection";
 
 const Exhibition = () => {
   const logos = [
@@ -78,7 +79,7 @@ const Exhibition = () => {
   return (
     <main className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative w-full h-screen bg-primary px-5">
+      <section className="relative w-full h-[80vh] md:h-[60vh] bg-primary px-5 pt-[70px]">
         {/* <div className="absolute inset-0 w-full h-full">
           <Image
             src="/images/conference.jpg"
@@ -89,12 +90,21 @@ const Exhibition = () => {
           <div className="absolute inset-0 bg-primary/80"></div>
         </div> */}
 
+        <div className="absolute inset-0 w-full h-full">
+          <img
+            src="https://res.cloudinary.com/drjunh0fs/image/upload/v1769192476/IMG_5439_zgghr2.jpg"
+            alt="Exhibition"
+            className="object-cover object-top w-full h-full"
+          />
+          <div className="absolute inset-0 bg-primary-light/60"></div>
+        </div>
+
         <div className="relative z-10 w-full  h-full flex items-center justify-center text-center">
           <div className="w-full max-w-3xl">
-            <h1 className="text-4xl md:text-7xl font-bold mb-6 text-white!">
+            <h1 className="text-4xl md:text-7xl font-bold mb-4 text-white!">
               Exhibit at the Summit
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Showcase your innovations to a global audience of industry
               leaders, investors, and decision-makers in agriculture and
               livestock technology.
@@ -121,10 +131,10 @@ const Exhibition = () => {
       <section className="w-full px-5 py-20 md:py-28 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-primary leading-tight">
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 text-primary leading-tight">
               Why Exhibit?
             </h2>
-            <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
+            <div className="space-y-6 md:text-lg text-gray-700 leading-relaxed">
               <p>
                 Nigeria is the largest market of livestock and aquaculture in
                 West Africa. The trends in the consumption of animal sourced
@@ -145,8 +155,8 @@ const Exhibition = () => {
           </div>
 
           {/* Sponsor Logos */}
-          <div className="mt-20 pt-16 border-t border-gray-200">
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-8 items-center justify-items-center opacity-70">
+          <div className="mt-8 pt-8 border-t border-gray-200">
+            <div className="flex items-center justify-center flex-wrap gap-8 opacity-70">
               {logos.map((logo, index) => (
                 <div
                   key={index}
@@ -170,7 +180,7 @@ const Exhibition = () => {
       <section className="w-full px-5 py-20 md:py-28 bg-primary text-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-white!">
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-2 md:mb-4 text-white!">
               Exhibition Benefits
             </h2>
           </div>
@@ -193,13 +203,13 @@ const Exhibition = () => {
       </section>
 
       {/* Exhibitor Profiles Section */}
-      <section className="w-full px-5 py-20 md:py-28 bg-white">
+      <section className="w-full px-5 py-20 pb-12 md:py-28 bg-white">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 text-primary">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-2 md:mb-4 text-primary">
               Exhibitor Profiles
             </h2>
-            <p className="text-xl text-gray-600 mt-6">Who will you meet?</p>
+            <p className="text-xl text-gray-600">Who will you meet?</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
@@ -212,33 +222,24 @@ const Exhibition = () => {
               </div>
             ))}
           </div>
-
-          <div className="mt-16 text-center">
-            <p className="text-lg text-gray-700 mb-8 max-w-3xl mx-auto">
-              Access to the global supply chain under one roof and capture your
-              next big contract.
-            </p>
-            <Button
-              text="Register Your Interest"
-              variant="primary"
-              className="md:px-10 md:py-4 text-sm font-semibold tracking-wide mx-auto"
-            />
-          </div>
         </div>
       </section>
 
+      <HighlightSection />
+
       {/* CTA Section - Be the First to Know */}
-      <section className="w-full px-5 py-20 md:py-28 bg-gray-50">
+      <section className="w-full px-5 py-20 md:py-28 bg-primary">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-primary leading-tight">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 text-white! leading-tight">
             Secure Your Exhibition Space
           </h2>
-          <p className="text-lg text-gray-600 mb-8">
-            Join leading companies in the livestock and aquaculture industry at
-            West Africa&apos;s premier trade event.
-          </p>
-          <div className="space-y-4">
-            <p className="text-lg text-gray-700">
+          <div className="max-w-2xl mx-auto">
+            <p className="md:text-lg text-white! mb-4">
+              Join leading companies in the livestock and aquaculture industry
+              at West Africa&apos;s premier trade event.
+            </p>
+
+            <p className="md:text-lg text-white!">
               We support your entry strategy by connecting you to the right
               distributors and facilitating profitable partnerships. We also
               offer you experts&apos; insights into the local regulations so you
@@ -252,41 +253,15 @@ const Exhibition = () => {
               className="md:px-12 md:py-5 text-sm font-semibold tracking-wider mx-auto"
             />
           </div>
-          <p className="text-gray-600 mt-8">
+          <p className="text-white! mt-8">
             Questions? Reach out to our exhibitions team at{" "}
             <a
               href="mailto:exhibit@livestocksummit.com"
-              className="text-primary hover:text-secondary underline font-medium"
+              className="text-white! hover:text-secondary underline font-medium"
             >
               exhibit@livestocksummit.com
             </a>
           </p>
-        </div>
-      </section>
-
-      {/* Stay in the Loop */}
-      <section className="w-full px-5 py-16 md:py-20">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-primary">
-            Stay in the Loop
-          </h2>
-          <p className="text-xl text-gray-600 mb-8">
-            Get the latest updates on exhibition opportunities, speaker
-            announcements, and early bird discounts.
-          </p>
-
-          <div className="flex flex-col md:flex-row gap-4 max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-6 py-4 rounded-full border border-gray-300 focus:outline-none focus:border-primary"
-            />
-            <Button
-              text="Subscribe"
-              variant="primary"
-              className="md:px-8 md:py-4"
-            />
-          </div>
         </div>
       </section>
     </main>

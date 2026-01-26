@@ -1,10 +1,12 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import Button from "@/components/UI/Button";
 import { useQuery } from "@tanstack/react-query";
 import { getAllImagesUrls } from "@/lib/cloudinary";
 import { IoClose, IoChevronBack, IoChevronForward } from "react-icons/io5";
+import { optimizeCloudinaryUrl } from "@/lib/helper";
+import CtaSection from "@/components/CtaSection";
 
 const Gallery = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -20,11 +22,7 @@ const Gallery = () => {
     { id: "events", name: "Events" },
   ];
 
-  const {
-    data: galleryData,
-    error: cloudinaryError,
-    isLoading,
-  } = useQuery({
+  const { data: galleryData, isLoading } = useQuery({
     queryKey: ["gallery"],
     queryFn: () => getAllImagesUrls("GTTI/speakers and guests"),
   });
@@ -71,29 +69,49 @@ const Gallery = () => {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [isModalOpen, selectedImageIndex, galleryData?.resources?.length]);
 
-  const currentImage =
-    isModalOpen && galleryData?.resources?.[selectedImageIndex];
+  const currentImage = useMemo(() => {
+    return isModalOpen && galleryData?.resources?.[selectedImageIndex];
+  }, [selectedImageIndex]);
+
+  // Add this: Preload adjacent images
+  useEffect(() => {
+    if (!isModalOpen || !galleryData?.resources) return;
+
+    const preloadImage = (index) => {
+      if (index >= 0 && index < galleryData.resources.length) {
+        const img = new window.Image();
+        img.src = optimizeCloudinaryUrl(galleryData.resources[index].url, {
+          width: 1200,
+          quality: "auto",
+          format: "auto",
+        });
+      }
+    };
+
+    // Preload next and previous images
+    preloadImage(selectedImageIndex + 1);
+    preloadImage(selectedImageIndex - 1);
+  }, [selectedImageIndex, isModalOpen, galleryData]);
 
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-white ">
       {/* Hero Section */}
-      <section className="relative w-full h-[60vh] bg-primary px-5">
+      <section className="relative w-full h-[80vh] md:h-[60vh] bg-primary px-5 pt-[70px]">
         <div className="absolute inset-0 w-full h-full">
           <img
-            src="https://res.cloudinary.com/drjunh0fs/image/upload/v1769192476/IMG_5439_zgghr2.jpg"
+            src="http://res.cloudinary.com/drjunh0fs/image/upload/w_1200,f_auto,q_auto/v1769172594/IMG_5420_nel6gh.jpg"
             alt="Exhibition"
             className="object-cover object-top w-full h-full"
-            priority
           />
 
           <div className="absolute inset-0 bg-primary-light/60"></div>
         </div>
         <div className="relative z-10 w-full h-full flex items-center justify-center text-center">
           <div className="w-full max-w-4xl">
-            <h1 className="text-4xl md:text-7xl font-bold mb-6 text-white!">
+            <h1 className="text-4xl md:text-7xl font-bold mb-4 text-white!">
               Gallery
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+            <p className="md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
               Explore moments from our exhibitions, programs, and community
               impact across Africa
             </p>
@@ -150,7 +168,11 @@ const Gallery = () => {
                   className={`relative overflow-hidden rounded-lg group bg-neutral cursor-pointer ${colSpan} ${rowSpan}`}
                 >
                   <img
-                    src={image?.url}
+                    src={optimizeCloudinaryUrl(image?.url, {
+                      width: 1000,
+                      quality: 90,
+                      format: "auto",
+                    })}
                     alt={image?.asset_id}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
@@ -213,10 +235,18 @@ const Gallery = () => {
             className="relative max-w-7xl max-h-[90vh] w-full h-full flex items-center justify-center p-4"
             onClick={(e) => e.stopPropagation()}
           >
-            <img
-              src={currentImage.url}
+            <Image
+              src={optimizeCloudinaryUrl(currentImage.url, {
+                width: 1200,
+                quality: "auto",
+                format: "auto",
+              })}
               alt={currentImage.asset_id}
+              width={800}
+              height={600}
               className="max-w-full max-h-full object-contain"
+              // quality={100}
+              unoptimized
             />
           </div>
 
@@ -226,26 +256,7 @@ const Gallery = () => {
           </div>
         </div>
       )}
-
-      {/* CTA Section */}
-      <section className="w-full mx-auto px-5 py-20 md:py-28 bg-neutral">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-primary leading-tight">
-            Join Our Next Event
-          </h2>
-          <p className="text-lg text-gray-600 mb-8">
-            Be part of the transformation. Attend our upcoming exhibitions and
-            training programs.
-          </p>
-          <div className="flex justify-center items-center">
-            <Button
-              text="Register for Event"
-              variant="primary"
-              className="md:px-12 md:py-5 text-sm font-semibold tracking-wider mx-auto"
-            />
-          </div>
-        </div>
-      </section>
+      <CtaSection />
     </main>
   );
 };

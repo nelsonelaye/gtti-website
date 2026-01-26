@@ -4,7 +4,7 @@ import { FaInstagram, FaLinkedin, FaTiktok } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <footer className="bg-(--color-primary) text-white py-12 px-8">
+    <footer className="bg-(--color-primary) text-white py-12 px-8 border-t border-neutral/30">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-wrap justify-between items-start gap-8">
           {/* Name */}
@@ -77,7 +77,7 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <div className="mt-8 pt-8 border-t border-white/20 text-center text-sm">
+        <div className="mt-8 pt-8 border-t border-neutral/30 text-center text-sm">
           <p>
             © 2035 by GTTI. Crafted with ❤️ by{" "}
             <Link
