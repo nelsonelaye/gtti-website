@@ -18,7 +18,7 @@ const HighlightSection = () => {
         {/* </div> */}
 
         <div className="mx-auto pt-5">
-          <Link href="/gallery">
+          <Link href="/gallerys">
             <Button
               text="View highlights"
               variant="primary"
