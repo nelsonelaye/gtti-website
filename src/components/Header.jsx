@@ -37,7 +37,7 @@ const Header = () => {
     },
     {
       label: "GALLERY",
-      href: "/gallerys",
+      href: "/gallery",
       hasSubmenu: false,
     },
     {
