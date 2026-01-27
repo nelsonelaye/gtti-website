@@ -4,7 +4,7 @@ import { FaInstagram, FaLinkedin, FaTiktok } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <footer className="bg-(--color-primary) text-white py-12 px-8 border-t border-neutral/30">
+    <footer className="bg-(--color-primary) text-white py-12 px-5 md:px-8 border-t border-neutral/30">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-wrap justify-between items-start gap-8">
           {/* Name */}
@@ -15,12 +15,25 @@ const Footer = () => {
           {/* Contact Info */}
           <div className="flex-1 min-w-[200px]">
             <div className="space-y-2 text-sm">
-              <p>+234 123-4567 890</p>
-              <p>tcampbell@example.com</p>
               <p>
-                123 Business Ave, Suite 100
+                <a href="tel:+2348137969988">+234 8137969988,</a>
                 <br />
-                Abuja
+                <a href="tel:+2348033628532">+234 8033628532</a>
+              </p>
+              <p>
+                <a
+                  href="mailto:support@gtti.com.ng"
+                  className="underline hover:text-secondary transition-colors"
+                >
+                  support@gtti.com.ng
+                </a>
+              </p>
+              <p>
+                2, Fadeyi Street, off Obafemi Awolowo Way,
+                <br />
+                Ikeja, Lagos,
+                <br />
+                Nigeria, West Africa
               </p>
             </div>
           </div>
@@ -77,9 +90,9 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <div className="mt-8 pt-8 border-t border-neutral/30 text-center text-sm">
+        <div className="mt-8 pt-8 border-t border-neutral/30 text-center text-[11px] md:text-sm">
           <p>
-            © 2035 by GTTI. Crafted with ❤️ by{" "}
+            © {new Date().getFullYear()} GTTI. Crafted with ❤️ by{" "}
             <Link
               href="https://nelsonelaye.xyz"
               target="_blank"

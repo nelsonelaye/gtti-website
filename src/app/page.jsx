@@ -93,29 +93,29 @@ export default function Home() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8  md:min-h-[600px]">
           <div className="md:col-span-1 flex flex-col gap-4">
-            <div className="relative w-full h-64 md:h-full">
+            <div className="relative w-full h-64 md:h-full rounded-lg overflow-hidden">
               <Image
                 src="/images/conference.jpg"
                 alt="Conference Audience"
                 fill
-                className="rounded-lg object-cover"
+                className="rounded-lg object-cover hover:scale-110 transition-transform duration-500"
               />
             </div>
-            <div className="relative w-full h-64 md:h-full">
+            <div className="relative w-full h-64 md:h-full overflow-hidden rounded-lg">
               <Image
                 src="/images/goat.jpg"
                 alt="Panel Discussion"
                 fill
-                className="rounded-lg object-cover"
+                className="rounded-lg object-cover hover:scale-110 transition-transform duration-500"
               />
             </div>
           </div>
-          <div className="md:col-span-1 relative w-full h-auto min-h-[536px] md:h-full">
+          <div className="md:col-span-1 relative w-full h-auto min-h-[536px] md:h-full rounded-lg overflow-hidden">
             <Image
               src="/images/landscape.jpg"
               alt="Conference Hall"
               fill
-              className="rounded-lg object-cover"
+              className="rounded-lg object-cover hover:scale-110 transition-transform duration-500"
             />
           </div>
         </div>

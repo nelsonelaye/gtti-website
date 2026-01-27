@@ -88,7 +88,7 @@ const Header = () => {
           isVisible ? "translate-y-0" : "-translate-y-full"
         } ${isScrolled ? "bg-white backdrop-blur-md" : "bg-transparent"}`}
       >
-        <div className="max-w-7xl mx-auto px-4 md:px-8 py-4 flex items-center justify-between border-b-secondary/50 ">
+        <div className="max-w-7xl mx-auto px-5 md:px-8 py-4 flex items-center justify-between border-b-secondary/50 ">
           <div className="flex items-center gap-6 md:gap-8">
             <Link href="/" className={!isScrolled ? "md:mx-auto" : "mr-auto"}>
               <div
@@ -125,8 +125,9 @@ const Header = () => {
           <div className="flex items-center gap-6 md:gap-8 ml-auto">
             <div className={`flex items-center gap-4 ${"text-black"}`}>
               <Button
-                className={`hidden md:block ${isScrolled && "bg-primary!"} `}
+                className={`hidden md:block ${isScrolled && ""} `}
                 text="register to attend"
+                variant="primary"
               />
               <Button
                 className={`hidden md:block ${
