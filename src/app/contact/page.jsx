@@ -1,4 +1,5 @@
 "use client";
+import SponsorshipSection from "@/components/SponsorshipSection";
 import Button from "@/components/UI/Button";
 import Image from "next/image";
 import React, { useState } from "react";
@@ -153,6 +154,7 @@ const Contact = () => {
           </div>
         </div>
       </section>
+      <SponsorshipSection />
     </main>
   );
 };

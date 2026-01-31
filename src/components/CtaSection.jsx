@@ -10,7 +10,7 @@ const CtaSection = () => {
             Connect. Invest. Transform.
           </h2>
           <h3 className="text-lg md:text-4xl font-bold mb-8 text-white!">
-            International Livestock & Agriculture Summit 2026
+            International Livestock & Aquaculture Summit 2026
           </h3>
           <p className="md:text-lg mb-8 max-w-2xl mx-auto text-white!">
             Experience a world-class gathering of industry leaders and

@@ -8,6 +8,7 @@ import { IoBulbOutline, IoEyeOutline, IoTicketOutline } from "react-icons/io5";
 import { FaChartLine } from "react-icons/fa6";
 import HighlightSection from "@/components/HighlightSection";
 import ExhibitSection from "@/components/ExhibitSection";
+import Link from "next/link";
 
 const Exhibition = () => {
   const logos = [
@@ -110,11 +111,16 @@ const Exhibition = () => {
               leaders, investors, and decision-makers in agriculture and
               livestock technology.
             </p>
-            <Button
-              text="Apply to Exhibit"
-              variant="primary"
-              className="md:px-12 md:py-5 mx-auto"
-            />
+            <Link
+              target="_blank"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSeGjzAtjCYds2_JZKf9hQ_avtplaBMMxdQIS73xnAyEBupWKw/viewform"
+            >
+              <Button
+                text="Apply to Exhibit"
+                variant="primary"
+                className="md:px-12 md:py-5 mx-auto"
+              />
+            </Link>
           </div>
           {/* <div className="w-full h-full z-20">
             <Image
@@ -249,13 +255,19 @@ const Exhibition = () => {
               can better navigate the market.
             </p>
           </div>
-          <div className="mt-12">
+
+          <Link
+            target="_blank"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSeGjzAtjCYds2_JZKf9hQ_avtplaBMMxdQIS73xnAyEBupWKw/viewform"
+            className="mt-12"
+          >
             <Button
               text="Apply to Exhibit"
               variant="primary"
               className="md:px-12 md:py-5 text-sm font-semibold tracking-wider mx-auto"
             />
-          </div>
+          </Link>
+
           <p className="text-white! mt-8">
             Questions? Reach out to our exhibitions team at{" "}
             <a

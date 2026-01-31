@@ -1,12 +1,13 @@
 import Image from "next/image";
 import React from "react";
 import Button from "./UI/Button";
+import Link from "next/link";
 
 const ExhibitSection = () => {
   return (
     <section className="w-full bg-primary text-white py-16">
       <div className="max-w-6xl mx-auto flex flex-col lg:flex-row  gap-12 px-5">
-        <div className="w-full lg:w-1/2 max-h-[500px] overflow-hidden relative rounded-lg ">
+        <div className="w-full max-md:h-96 lg:w-1/2 max-h-[500px] overflow-hidden relative rounded-lg ">
           <Image
             src="/images/exhibition.jpg"
             alt="Exhibitor booth"
@@ -30,11 +31,16 @@ const ExhibitSection = () => {
             technology or dairy logistics, showcase your innovations to the
             decision-makers transforming African agriculture.
           </p>
-          <Button
-            text="APPLY TO EXHIBIT"
-            variant="primary"
-            className="md:px-12! md:py-5!"
-          />
+          <Link
+            target="_blank"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSeGjzAtjCYds2_JZKf9hQ_avtplaBMMxdQIS73xnAyEBupWKw/viewform"
+          >
+            <Button
+              text="APPLY TO EXHIBIT"
+              variant="primary"
+              className="md:px-12! md:py-5!"
+            />
+          </Link>
         </div>
       </div>
     </section>

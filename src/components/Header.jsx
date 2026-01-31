@@ -129,13 +129,19 @@ const Header = () => {
                 text="register to attend"
                 variant="primary"
               />
-              <Button
-                className={`hidden md:block ${
-                  isScrolled &&
-                  "text-primary! border-primary! hover:bg-secondary! hover:border-secondary!"
-                } `}
-                text="Apply to Exhibit"
-              />
+
+              <Link
+                target="_blank"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSeGjzAtjCYds2_JZKf9hQ_avtplaBMMxdQIS73xnAyEBupWKw/viewform"
+              >
+                <Button
+                  className={`hidden md:block ${
+                    isScrolled &&
+                    "text-primary! border-primary! hover:bg-secondary! hover:border-secondary!"
+                  } `}
+                  text="Apply to Exhibit"
+                />
+              </Link>
 
               <button
                 className={`md:hidden text-white underline text-lg md:text-xl ${
@@ -190,11 +196,16 @@ const Header = () => {
                 variant="primary"
               />
 
-              <Button
-                className="w-full"
-                text="Apply to Exhibit"
-                onClick={handleMenuClick}
-              />
+              <Link
+                target="_blank"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSeGjzAtjCYds2_JZKf9hQ_avtplaBMMxdQIS73xnAyEBupWKw/viewform"
+              >
+                <Button
+                  className="w-full"
+                  text="Apply to Exhibit"
+                  onClick={handleMenuClick}
+                />
+              </Link>
             </div>
           </div>
         </div>

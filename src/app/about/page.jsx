@@ -458,6 +458,8 @@ const About = () => {
         </div>
       </section>
 
+      {/* <SponsorshipSection /> */}
+
       <section className="w-full bg-primary text-white py-16">
         <div className="max-w-6xl mx-auto flex flex-col lg:flex-row  gap-12 px-5">
           <div className="w-full lg:w-1/2 max-h-[500px] overflow-hidden relative rounded-lg ">

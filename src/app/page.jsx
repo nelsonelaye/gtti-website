@@ -12,13 +12,16 @@ import Link from "next/link";
 import HighlightSection from "@/components/HighlightSection";
 import CtaSection from "@/components/CtaSection";
 import ExhibitSection from "@/components/ExhibitSection";
+import OpportunityCarousel from "@/components/carousel/OpportunityCarousel";
+import CountdownTimer from "@/components/CountDownTimer";
+import SponsorshipSection from "@/components/SponsorshipSection";
 
 export default function Home() {
   const [showYoutubeFrame, setShowYoutubeFrame] = useState(false);
   return (
     <main className="min-h-screen">
       {/* <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start"></main> */}
-      <section className="relative w-full h-[90vh] md:h-screen overflow-hidden bg-primary-light px-5 pt-[70px]">
+      <section className="relative w-full h-auto md:h-screen overflow-hidden bg-primary-light px-5 pt-[105px] py-[70px]">
         <div className="absolute inset-0 w-full h-full">
           <Image
             src="/images/cows-hero.jpg"
@@ -27,41 +30,48 @@ export default function Home() {
             className="object-cover"
             priority
           />
-
           <div className="absolute inset-0 bg-primary-light/80"></div>
         </div>
 
-        {/* Gradient Overlay */}
-        {/* <div className="absolute inset-0 "></div> */}
-
         {/* Content */}
         <div className="relative z-10 flex h-full items-center justify-center flex-col">
-          <div className="text-center text-white mb-4 md:mb-20">
+          <div className="text-center text-white mb-4 md:mb-12">
             <div className="mb-8">
               <p className="text-sm max-md:font-medium md:text-xl font-light tracking-wider mb-4">
                 OCTOBER 20TH - 22ND 2026
               </p>
               <h1 className="text-3xl md:text-7xl font-bold mb-4 max-w-5xl text-white!">
-                3RD International Livestock and Agriculture Investment Summit &
+                3RD International Livestock and Aquaculture Investment Summit &
                 Exhibition 2026
               </h1>
-              <p className="text-sm max-md:font-medium  md:text-2xl font-light">
-                NICON LUXRY HOTEL, TAFAWA BALEWA WAY, FCT, ABUJA
+              <p className="text-sm max-md:font-medium md:text-2xl font-light">
+                NICON LUXURY HOTEL, TAFAWA BALEWA WAY, FCT, ABUJA
               </p>
             </div>
           </div>
 
-          <div className="flex justify-center max-md:flex-wrap w-full  gap-4">
+          {/* Countdown Timer */}
+          <CountdownTimer targetDate="2026-10-20T00:00:00" />
+
+          {/* CTA Buttons */}
+          <div className="flex justify-center max-md:flex-wrap w-full gap-4">
             <Button
-              text="register to attend"
+              text="Register to Attend"
               variant="primary"
-              className="md:px-12! md:py-5! max-md:w-full"
+              className="md:px-12 md:py-5 max-md:w-full"
             />
-            <Button
-              text="Apply to Exhibit"
-              variant="secondary"
-              className="md:px-12! md:py-5! max-md:w-full"
-            />
+
+            <Link
+              target="_blank"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSeGjzAtjCYds2_JZKf9hQ_avtplaBMMxdQIS73xnAyEBupWKw/viewform"
+              className="max-md:w-full"
+            >
+              <Button
+                text="Apply to Exhibit"
+                variant="secondary"
+                className="md:px-12 md:py-5 max-md:w-full"
+              />
+            </Link>
           </div>
         </div>
       </section>
@@ -74,20 +84,20 @@ export default function Home() {
           </div>
           <div className="md:col-span-1">
             <p className="md:text-lg mb-4">
-              The Annual Professional Conference is an exciting gathering of
-              industry experts, thought leaders, and professionals from across
-              the country. This year&apos;s event will feature a wide range of
-              sessions and workshops designed to help attendees stay ahead of
-              the curve and achieve their professional goals.
+              The International Livestock and Aquaculture Investment Summit and
+              Exhibition (ILASE) 2026 is the premier gathering for industry
+              experts, thought leaders, and professionals dedicated to the
+              future of protein production in Africa. This year’s event features
+              a high-impact blend of technical sessions, investment forums, and
+              a world-class exhibition designed to help attendees stay ahead of
+              the curve, secure funding, and achieve their professional goals in
+              the evolving agricultural landscape.
             </p>
             <p className="md:text-lg">
-              This year&apos;s conference will be held at the{" "}
-              <span className="font-bold">
-                San Diego Convention Center in San Diego, California.
-              </span>{" "}
-              With easy access to transportation, nearby hotels, and a wide
-              range of dining and entertainment options, SDCC is the perfect
-              place to host our premier conference.
+              Held in Nigeria—Africa’s largest economy and a burgeoning hub for
+              agri-tech—the summit offers a unique platform for stakeholders to
+              connect with decision-makers and explore the vast untapped
+              potential of the West African market.
             </p>
           </div>
         </div>
@@ -95,8 +105,8 @@ export default function Home() {
           <div className="md:col-span-1 flex flex-col gap-4">
             <div className="relative w-full h-64 md:h-full rounded-lg overflow-hidden">
               <Image
-                src="/images/conference.jpg"
-                alt="Conference Audience"
+                src="/images/tilipia.jpg"
+                alt="Tilapia"
                 fill
                 className="rounded-lg object-cover hover:scale-110 transition-transform duration-500"
               />
@@ -104,18 +114,19 @@ export default function Home() {
             <div className="relative w-full h-64 md:h-full overflow-hidden rounded-lg">
               <Image
                 src="/images/goat.jpg"
-                alt="Panel Discussion"
+                alt="Goat"
                 fill
                 className="rounded-lg object-cover hover:scale-110 transition-transform duration-500"
               />
             </div>
           </div>
-          <div className="md:col-span-1 relative w-full h-auto min-h-[536px] md:h-full rounded-lg overflow-hidden">
+          <div className="md:col-span-1 relative w-full  h-64 md:min-h-[536px] md:h-full rounded-lg overflow-hidden">
             <Image
-              src="/images/landscape.jpg"
-              alt="Conference Hall"
+              src="/images/pigs.jpg"
+              alt="Pigs"
               fill
               className="rounded-lg object-cover hover:scale-110 transition-transform duration-500"
+              quality={100}
             />
           </div>
         </div>
@@ -197,8 +208,8 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 relative inline-block">
-              Sponsors
-              <div className="absolute -bottom-2 left-0 right-0 h-3 bg-linear-to-r from-transparent via-gray-300 to-transparent"></div>
+              Partners & Sponsors
+              {/* <div className="absolute -bottom-2 left-0 right-0 h-3 bg-linear-to-r from-transparent via-gray-300 to-transparent"></div> */}
             </h2>
           </div>
 
@@ -209,6 +220,9 @@ export default function Home() {
       </section>
 
       <HighlightSection />
+
+      <SponsorshipSection />
+      <OpportunityCarousel />
 
       <CtaSection />
     </main>

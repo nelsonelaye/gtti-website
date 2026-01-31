@@ -5,10 +5,10 @@ import Button from "./UI/Button";
 
 const HighlightSection = () => {
   return (
-    <section className="w-full overflow-hidden py-16  text-white">
+    <section className="w-full overflow-hidden py-16 md:py-20  text-white">
       <div className="mx-auto px-5 flex flex-col gap-4">
         <div className="text-center">
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-8 text-primary">
+          <h2 className="text-3xl md:text-5xl font-bold mb-8 text-primary">
             Highlights
           </h2>
           {/* <p className="text-xl text-gray-600">Who will you meet?</p> */}
