@@ -475,7 +475,8 @@ const About = () => {
           </div>
           <div className="w-full lg:w-1/2 text-left">
             <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white!">
-              Pioneer a Food-Secure <br /> and Prosperous Africa
+              {/* Pioneer a Food-Secure <br /> and Prosperous Africa */}
+              Become a Trailblaizing Partner
             </h2>
 
             <div className="md:text-lg text-gray-300 mb-8">

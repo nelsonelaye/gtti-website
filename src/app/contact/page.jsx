@@ -24,8 +24,8 @@ const Contact = () => {
     {
       title: "Email",
       type: "email",
-      value: "support@gtti.com.ng",
-      href: "mailto:support@gtti.com.ng",
+      value: "support@gttinitiatives.org",
+      href: "mailto:support@gttinitiatives.org",
     },
   ];
 

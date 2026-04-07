@@ -22,10 +22,10 @@ const Footer = () => {
               </p>
               <p>
                 <a
-                  href="mailto:support@gtti.com.ng"
+                  href="mailto:support@gttinitiatives.org"
                   className="underline hover:text-secondary transition-colors"
                 >
-                  support@gtti.com.ng
+                  support@gttinitiatives.org
                 </a>
               </p>
               <p>
@@ -97,7 +97,7 @@ const Footer = () => {
               href="https://nelsonelaye.xyz"
               target="_blank"
               rel="noopener noreferrer"
-              className="underline text-semibold hover:text-secondary cursor-pointer"
+              className="text-semibold opacity-50 hover:text-secondary hover:opacity-100 cursor-pointer transition-all duration-300"
             >
               Nelson Elaye
             </Link>

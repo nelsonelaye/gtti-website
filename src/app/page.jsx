@@ -37,12 +37,15 @@ export default function Home() {
         <div className="relative z-10 flex h-full items-center justify-center flex-col">
           <div className="text-center text-white mb-4 md:mb-12">
             <div className="mb-8">
-              <p className="text-sm max-md:font-medium md:text-xl font-light tracking-wider mb-4">
-                OCTOBER 20TH - 22ND 2026
+              <p className="text-sm max-md:font-medium md:text-2xl tracking-wider mb-4">
+                NOVEMBER 17TH - 19TH 2026
               </p>
               <h1 className="text-3xl md:text-7xl font-bold mb-4 max-w-5xl text-white!">
                 3RD International Livestock and Aquaculture Investment Summit &
                 Exhibition 2026
+                {/* SUSTAINABLE INNOVATION IN LIVESTOCK AND AQUACULTURE:
+BUILDING CLIMATE-RESILIENT
+FOOD SYSTEMS FOR NIGERIA'S FUTURE. */}
               </h1>
               <p className="text-sm max-md:font-medium md:text-2xl font-light">
                 NICON LUXURY HOTEL, TAFAWA BALEWA WAY, FCT, ABUJA
@@ -51,7 +54,7 @@ export default function Home() {
           </div>
 
           {/* Countdown Timer */}
-          <CountdownTimer targetDate="2026-10-20T00:00:00" />
+          <CountdownTimer targetDate="2026-11-17T00:00:00" />
 
           {/* CTA Buttons */}
           <div className="flex justify-center max-md:flex-wrap w-full gap-4">
@@ -169,34 +172,34 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <SpeakerCard
-              name="Deepankar Rustagi"
-              title="Founder & CEO, Omniretail Technologies"
-              imageSrc="/images/speaker-1.jpg"
+              name="Speaker"
+              title="Founder & CEO"
+              imageSrc="/images/vector-female.jpg"
             />
             <SpeakerCard
-              name="Kola Aina"
-              title="Founding Partner, Ventures Platform Fund"
-              imageSrc="/images/speaker-2.jpg"
+              name="Speaker"
+              title="Founding Partner"
+              imageSrc="/images/vector-female.jpg"
             />
             <SpeakerCard
-              name="Emeka Emetarom"
-              title="Founder & CEO, Qore"
-              imageSrc="/images/speaker-3.jpg"
+              name="Speaker"
+              title="Founder & CEO"
+              imageSrc="/images/vector-male.jpg"
             />
             <SpeakerCard
-              name="Kola Aina"
-              title="Founding Partner, Ventures Platform Fund"
-              imageSrc="/images/speaker-2.jpg"
+              name="Speaker"
+              title="Founding Partner"
+              imageSrc="/images/vector-male.jpg"
             />
             <SpeakerCard
-              name="Emeka Emetarom"
-              title="Founder & CEO, Qore"
-              imageSrc="/images/speaker-3.jpg"
+              name="Speaker"
+              title="Founder & CEO"
+              imageSrc="/images/vector-female.jpg"
             />
             <SpeakerCard
-              name="Uka Eje"
-              title="CEO, Thrive Agric"
-              imageSrc="/images/speaker-1.jpg"
+              name="Speaker"
+              title="CEO"
+              imageSrc="/images/vector-male.jpg"
             />
           </div>
         </div>

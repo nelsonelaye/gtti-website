@@ -7,6 +7,9 @@ const BrandsCarousel = () => {
     "/images/brands/credlanche.png",
     "/images/brands/naccima.jpeg",
     "/images/brands/nafdac.png",
+    "/images/brands/pfan.jpg",
+    "/images/brands/nacdpamn.jpg",
+    "/images/brands/cafan.jpeg",
   ];
 
   const displayLogos = [...logos];
