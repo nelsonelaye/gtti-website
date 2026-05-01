@@ -1,5 +1,7 @@
 import React from "react";
 import Button from "./UI/Button";
+import { REGISTERATION_LINK } from "@/lib/constants";
+import Link from "next/link";
 
 const CtaSection = () => {
   return (
@@ -19,11 +21,17 @@ const CtaSection = () => {
             future-forward investment
           </p>
           <div className="flex justify-center items-center">
-            <Button
+              <Link
+                target="_blank"
+                href={REGISTERATION_LINK}
+            >
+                 <Button
               text="Register for Event"
               variant="primary"
               className="md:px-12 md:py-5 text-sm font-semibold tracking-wider mx-auto"
             />
+              </Link>
+         
           </div>
         </div>
       </div>

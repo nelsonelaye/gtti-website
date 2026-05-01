@@ -15,6 +15,7 @@ import ExhibitSection from "@/components/ExhibitSection";
 import OpportunityCarousel from "@/components/carousel/OpportunityCarousel";
 import CountdownTimer from "@/components/CountDownTimer";
 import SponsorshipSection from "@/components/SponsorshipSection";
+import { EXHIBITION_LINK, REGISTERATION_LINK } from "@/lib/constants";
 
 export default function Home() {
   const [showYoutubeFrame, setShowYoutubeFrame] = useState(false);
@@ -37,17 +38,17 @@ export default function Home() {
         <div className="relative z-10 flex h-full items-center justify-center flex-col">
           <div className="text-center text-white mb-4 md:mb-12">
             <div className="mb-8">
-              <p className="text-sm max-md:font-medium md:text-2xl tracking-wider mb-4">
+              <p className="text-sm max-md:font-medium md:text-xl lg:text-2xl tracking-wider mb-4">
                 NOVEMBER 17TH - 19TH 2026
               </p>
-              <h1 className="text-3xl md:text-7xl font-bold mb-4 max-w-5xl text-white!">
+              <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold mb-4 max-w-5xl text-white!">
                 3RD International Livestock and Aquaculture Investment Summit &
                 Exhibition 2026
                 {/* SUSTAINABLE INNOVATION IN LIVESTOCK AND AQUACULTURE:
 BUILDING CLIMATE-RESILIENT
 FOOD SYSTEMS FOR NIGERIA'S FUTURE. */}
               </h1>
-              <p className="text-sm max-md:font-medium md:text-2xl font-light">
+              <p className="text-sm max-md:font-medium md:text-xl lg:text-2xl font-light">
                 NICON LUXURY HOTEL, TAFAWA BALEWA WAY, FCT, ABUJA
               </p>
             </div>
@@ -58,15 +59,23 @@ FOOD SYSTEMS FOR NIGERIA'S FUTURE. */}
 
           {/* CTA Buttons */}
           <div className="flex justify-center max-md:flex-wrap w-full gap-4">
-            <Button
+    <Link
+                target="_blank"
+                href={REGISTERATION_LINK}
+            >
+              
+    <Button
               text="Register to Attend"
               variant="primary"
               className="md:px-12 md:py-5 max-md:w-full"
             />
+              </Link>
+            
+        
 
             <Link
               target="_blank"
-              href="https://docs.google.com/forms/d/e/1FAIpQLSeGjzAtjCYds2_JZKf9hQ_avtplaBMMxdQIS73xnAyEBupWKw/viewform"
+              href={EXHIBITION_LINK}
               className="max-md:w-full"
             >
               <Button
@@ -79,7 +88,7 @@ FOOD SYSTEMS FOR NIGERIA'S FUTURE. */}
         </div>
       </section>
       <section className="w-full px-5 md:max-w-[70%] mx-auto py-20 max-md:pt-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div className="md:col-span-1">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               About the <br /> Summit
@@ -105,8 +114,8 @@ FOOD SYSTEMS FOR NIGERIA'S FUTURE. */}
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8  md:min-h-[600px]">
-          <div className="md:col-span-1 flex flex-col gap-4">
-            <div className="relative w-full h-64 md:h-full rounded-lg overflow-hidden">
+          <div className="lg:col-span-1 flex flex-col gap-4">
+            <div className="relative w-full h-64 lg:h-full rounded-lg overflow-hidden">
               <Image
                 src="/images/tilipia.jpg"
                 alt="Tilapia"
@@ -114,7 +123,7 @@ FOOD SYSTEMS FOR NIGERIA'S FUTURE. */}
                 className="rounded-lg object-cover hover:scale-110 transition-transform duration-500"
               />
             </div>
-            <div className="relative w-full h-64 md:h-full overflow-hidden rounded-lg">
+            <div className="relative w-full h-64 lg:h-full overflow-hidden rounded-lg">
               <Image
                 src="/images/goat.jpg"
                 alt="Goat"
@@ -123,7 +132,7 @@ FOOD SYSTEMS FOR NIGERIA'S FUTURE. */}
               />
             </div>
           </div>
-          <div className="md:col-span-1 relative w-full  h-64 md:min-h-[536px] md:h-full rounded-lg overflow-hidden">
+          <div className="lg:col-span-1 relative w-full  h-64 md:min-h-[536px] lg:h-full rounded-lg overflow-hidden">
             <Image
               src="/images/pigs.jpg"
               alt="Pigs"
@@ -161,7 +170,7 @@ FOOD SYSTEMS FOR NIGERIA'S FUTURE. */}
         )}
       </section>
 
-      <section className="w-full px-5 py-16 md:py-20">
+      <section className="w-full px-5 py-16 md:py-20 hidden">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold text-black relative inline-block">

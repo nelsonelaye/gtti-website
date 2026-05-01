@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import Button from "./UI/Button";
 import Link from "next/link";
+import { EXHIBITION_LINK } from "@/lib/constants";
 
 const ExhibitSection = () => {
   return (
@@ -33,7 +34,7 @@ const ExhibitSection = () => {
           </p>
           <Link
             target="_blank"
-            href="https://docs.google.com/forms/d/e/1FAIpQLSeGjzAtjCYds2_JZKf9hQ_avtplaBMMxdQIS73xnAyEBupWKw/viewform"
+            href={EXHIBITION_LINK}
           >
             <Button
               text="APPLY TO EXHIBIT"

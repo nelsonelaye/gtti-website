@@ -9,6 +9,7 @@ import { FaChartLine } from "react-icons/fa6";
 import HighlightSection from "@/components/HighlightSection";
 import ExhibitSection from "@/components/ExhibitSection";
 import Link from "next/link";
+import { EXHIBITION_LINK } from "@/lib/constants";
 
 const Exhibition = () => {
   const logos = [
@@ -113,7 +114,7 @@ const Exhibition = () => {
             </p>
             <Link
               target="_blank"
-              href="https://docs.google.com/forms/d/e/1FAIpQLSeGjzAtjCYds2_JZKf9hQ_avtplaBMMxdQIS73xnAyEBupWKw/viewform"
+                  href={EXHIBITION_LINK}
             >
               <Button
                 text="Apply to Exhibit"
@@ -258,7 +259,7 @@ const Exhibition = () => {
 
           <Link
             target="_blank"
-            href="https://docs.google.com/forms/d/e/1FAIpQLSeGjzAtjCYds2_JZKf9hQ_avtplaBMMxdQIS73xnAyEBupWKw/viewform"
+            href={EXHIBITION_LINK}
             className="mt-12"
           >
             <Button

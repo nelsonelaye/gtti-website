@@ -4,9 +4,9 @@ import { FaInstagram, FaLinkedin, FaTiktok } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <footer className="bg-(--color-primary) text-white py-12 px-5 md:px-8 border-t border-neutral/30">
+    <footer className="bg-(--color-primary) overflow-hidden text-white py-12 px-5 md:px-8 border-t border-neutral/30">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-wrap justify-between items-start gap-8">
+        <div className="flex flex-col md:flex-row justify-between items-start gap-8">
           {/* Name */}
           <div className="flex-1 min-w-[200px]">
             <h2 className="text-3xl font-bold font-asap text-white!">GTTI</h2>

@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import { FiX } from "react-icons/fi";
 import Button from "@/components/UI/Button";
 import { MdMenu } from "react-icons/md";
+import { EXHIBITION_LINK, REGISTERATION_LINK } from "@/lib/constants";
 
 const Header = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -124,15 +125,26 @@ const Header = () => {
           {/* Right: Navigation (hidden on scroll) and Icons */}
           <div className="flex items-center gap-6 md:gap-8 ml-auto">
             <div className={`flex items-center gap-4 ${"text-black"}`}>
-              <Button
-                className={`hidden md:block ${isScrolled && ""} `}
-                text="register to attend"
-                variant="primary"
-              />
+
+               <Link
+                target="_blank"
+                href={REGISTERATION_LINK}
+              >
+                <Button
+                  className={`hidden md:block ${isScrolled && ""} `}
+                  text="register to attend"
+                  variant="primary"
+                />
+
+
+              </Link>
+
+          
+         
 
               <Link
                 target="_blank"
-                href="https://docs.google.com/forms/d/e/1FAIpQLSeGjzAtjCYds2_JZKf9hQ_avtplaBMMxdQIS73xnAyEBupWKw/viewform"
+                href={EXHIBITION_LINK}
               >
                 <Button
                   className={`hidden md:block ${
@@ -189,16 +201,23 @@ const Header = () => {
 
             {/* Action Buttons */}
             <div className="space-y-4 pt-8 pb-8">
-              <Button
+               <Link
+                target="_blank"
+                href={REGISTERATION_LINK}
+              >
+   <Button
                 className="w-full"
                 text="register to attend"
                 onClick={handleMenuClick}
                 variant="primary"
               />
 
+              </Link>
+           
+
               <Link
                 target="_blank"
-                href="https://docs.google.com/forms/d/e/1FAIpQLSeGjzAtjCYds2_JZKf9hQ_avtplaBMMxdQIS73xnAyEBupWKw/viewform"
+             href={EXHIBITION_LINK}
               >
                 <Button
                   className="w-full"
