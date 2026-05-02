@@ -57,7 +57,7 @@ const Header = () => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       setIsVisible(currentScrollY < lastScrollY || currentScrollY < 50);
-      setIsScrolled(currentScrollY > 600);
+      setIsScrolled(currentScrollY > 70);
       setLastScrollY(currentScrollY);
     };
 
@@ -89,9 +89,9 @@ const Header = () => {
           isVisible ? "translate-y-0" : "-translate-y-full"
         } ${isScrolled ? "bg-white backdrop-blur-md" : "bg-transparent"}`}
       >
-        <div className="max-w-7xl mx-auto px-5 md:px-8 py-4 flex items-center justify-between border-b-secondary/50 ">
-          <div className="flex items-center gap-6 md:gap-8">
-            <Link href="/" className={!isScrolled ? "md:mx-auto" : "mr-auto"}>
+        <div className="w-full mx-auto px-5 md:px-8 py-4 flex gap-8 items-center justify-between border-b-secondary/50 ">
+          <div className="flex-auto  flex justify-between items-center gap-6 md:gap-8">
+            <Link href="/">
               <div
                 className={`font-bold text-sm md:text-lg tracking-widest transition-all duration-300 ${
                   isScrolled ? "text-primary" : "text-white"
@@ -131,7 +131,7 @@ const Header = () => {
                 href={REGISTERATION_LINK}
               >
                 <Button
-                  className={`hidden md:block ${isScrolled && ""} `}
+                  className={`hidden lg:block ${isScrolled && ""} `}
                   text="register to attend"
                   variant="primary"
                 />
@@ -147,7 +147,7 @@ const Header = () => {
                 href={EXHIBITION_LINK}
               >
                 <Button
-                  className={`hidden md:block ${
+                  className={`hidden lg:block ${
                     isScrolled &&
                     "text-primary! border-primary! hover:bg-secondary! hover:border-secondary!"
                   } `}

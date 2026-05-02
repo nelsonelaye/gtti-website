@@ -8,13 +8,13 @@ const CtaSection = () => {
     <section className="w-full mx-auto px-5 py-20 md:py-28 bg-primary">
       <div className="mx-auto px-2 md:px-5 flex flex-col gap-4">
         <div className="text-center">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-white!">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white!">
             Connect. Invest. Transform.
           </h2>
-          <h3 className="text-lg md:text-4xl font-bold mb-8 text-white!">
+          <h3 className="text-lg lg:text-4xl font-bold mb-8 text-white!">
             International Livestock & Aquaculture Summit 2026
           </h3>
-          <p className="md:text-lg mb-8 max-w-2xl mx-auto text-white!">
+          <p className="lg:text-lg mb-8 max-w-2xl mx-auto text-white!">
             Experience a world-class gathering of industry leaders and
             innovators. Gain exclusive market insights, explore cutting-edge
             exhibitions, and bridge the gap between traditional farming and

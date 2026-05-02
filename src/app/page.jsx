@@ -87,7 +87,7 @@ FOOD SYSTEMS FOR NIGERIA'S FUTURE. */}
           </div>
         </div>
       </section>
-      <section className="w-full px-5 md:max-w-[70%] mx-auto py-20 max-md:pt-10">
+      <section className="w-full px-5 lg:max-w-[70%] mx-auto py-20 max-md:pt-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div className="md:col-span-1">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -145,7 +145,7 @@ FOOD SYSTEMS FOR NIGERIA'S FUTURE. */}
       </section>
 
       <section className="w-full relative">
-        <div className="relative w-full h-96 md:h-screen">
+        <div className="relative w-full h-96 md:h-[60vh] lg:h-screen">
           <img
             src="https://res.cloudinary.com/drjunh0fs/image/upload/v1769172658/IMG_5388_wfaabm.jpg"
             alt="conference speaker"

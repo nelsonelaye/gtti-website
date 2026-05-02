@@ -6,8 +6,8 @@ import Link from "next/link";
 const SponsorshipSection = () => {
   return (
     <section className="w-full bg-primary text-white py-16">
-      <div className="max-w-6xl mx-auto flex flex-col lg:flex-row  gap-12 px-5">
-        <div className="w-full max-md:h-96 h-full lg:w-1/2 max-h-[800px] overflow-hidden relative rounded-lg ">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row  gap-12 px-5">
+        <div className="w-full max-lg:h-96 h-full lg:w-1/2 max-h-[800px] overflow-hidden relative rounded-lg ">
           <Image
             src="/images/partners.jpg"
             alt="Exhibitor booth"
@@ -19,10 +19,10 @@ const SponsorshipSection = () => {
           <div className="absolute -top-4 -right-4 w-32 h-32 md:w-48 md:h-48 bg-gray-700 rounded-full mix-blend-multiply filter blur-xl opacity-20 z-10"></div>
         </div>
         <div className="w-full lg:w-1/2 text-left">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-white!">
+          <h2 className="text-3xl lg:text-5xl font-bold mb-6 text-white!">
             Become a Sponsor
           </h2>
-          <p className="md:text-lg text-gray-300 mb-8">
+          <p className="lg:text-lg text-gray-300 mb-8">
             Join us to be part of the exclusive group of private companies,
             producers, manufacturers, government Organizations, International
             Agencies and contributors that are supporting the ILASE Expo 2026.
@@ -32,7 +32,7 @@ const SponsorshipSection = () => {
             the success of this world-class livestock and aquaculture Trade fair
             Expo 2026.
           </p>
-          <p className="md:text-lg text-gray-300 mb-8">
+          <p className="lg:text-lg text-gray-300 mb-8">
             Position your brand through our{" "}
             <span className="font-bold">Bronze, Silver, Gold, or Platinum</span>{" "}
             packages. To sponsor, exhibit, or advertise in the event catalogue,
