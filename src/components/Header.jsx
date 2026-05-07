@@ -20,6 +20,7 @@ const Header = () => {
     { href: "/", label: "Home" },
     { href: "/exhibition", label: "Exhibit" },
     { href: "/gallery", label: "Gallery" },
+    { href: "/travel-guide", label: "Travel Guide" },
     { href: "/about", label: "About" },
     { href: "/contact", label: "Contact" },
   ];
@@ -39,6 +40,11 @@ const Header = () => {
     {
       label: "GALLERY",
       href: "/gallery",
+      hasSubmenu: false,
+    },
+    {
+      label: "TRAVEL GUIDE",
+      href: "/travel-guide",
       hasSubmenu: false,
     },
     {

@@ -31,10 +31,11 @@ const Footer = () => {
               <p>
                 2, Fadeyi Street, off Obafemi Awolowo Way,
                 <br />
-                Ikeja, Lagos,
+                Ikeja, Lagos, Nigeria
                 <br />
-                Nigeria, West Africa
               </p>
+
+              <p>27 minna Street Area 8 Garki Abuja, Nigeria</p>
             </div>
           </div>
 
@@ -92,7 +93,8 @@ const Footer = () => {
         {/* Copyright */}
         <div className="mt-8 pt-8 border-t border-neutral/30 text-center text-[11px] md:text-sm">
           <p>
-            © {new Date().getFullYear()} GTTI. Crafted with ❤️ by{" "}
+            © {new Date().getFullYear()} GTTI.
+            {/* Crafted with ❤️ by{" "}
             <Link
               href="https://nelsonelaye.xyz"
               target="_blank"
@@ -100,7 +102,7 @@ const Footer = () => {
               className="text-semibold opacity-50 hover:text-secondary hover:opacity-100 cursor-pointer transition-all duration-300"
             >
               Nelson Elaye
-            </Link>
+            </Link> */}
           </p>
         </div>
       </div>

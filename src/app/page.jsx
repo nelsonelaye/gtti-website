@@ -1,11 +1,11 @@
 "use client";
 import Image from "next/image";
-import Header from "@/components/Header";
+// import Header from "@/components/Header";
 import SpeakerCard from "@/components/SpeakerCard";
 import Button from "@/components/UI/Button";
 import { FaPlay, FaArrowRight } from "react-icons/fa6";
 import BrandsCarousel from "@/components/BrandsCarousel";
-import GalleryCarousel from "@/components/GalleryCarousel";
+// import GalleryCarousel from "@/components/GalleryCarousel";
 import YoutubeFrame from "@/components/YoutubeFrame";
 import { useState } from "react";
 import Link from "next/link";
